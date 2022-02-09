@@ -27,15 +27,15 @@ def parse(rawfile, field_list):
 
 
 @click.command()
-@click.argument("infile", type=click.File("r"))
-@click.argument("outfile", type=click.File("w"))
 @click.option(
     "--fields_csv",
     type=click.Path(exists=True, dir_okay=False),
     help="a CSV file specifying the mapping betwen field names and positions in the MMCD file. Defaults to the mapping for the 2020 reporting year.",
 )
+@click.argument("infile", type=click.File("r"))
+@click.argument("outfile", type=click.File("w"))
 def to_csv(infile, outfile, fields_csv=None):
-    """Convert a MMCD to a CSV file
+    """Convert US-CDC mortality data to CSV format.
 
     INFILE is the raw MMCD file to convert.
     OUTFILE is the CSV file to be created.

@@ -13,6 +13,10 @@ $ ./mmcd_to_csv.py test_data.txt out.csv
 
 Converts the mortality records in `test_data.txt` (a random sampling of 100 records from the 2020 reporting file) to `out.csv`.
 
+### Dependencies
+
+* [Click](https://click.palletsprojects.com/)
+
 
 ### Alternate field mappings
 
